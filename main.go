@@ -1,15 +1,15 @@
 package main
 
 import (
-	"din/din"
+	"din"
 	"fmt"
 	"net/http"
 )
 
 func main() {
-	d:=din.New()
+	d := din.New()
 	d.Get("/foo", func(writer http.ResponseWriter, request *http.Request) {
-		fmt.Fprintf(writer,"%q","this is foo")
+		fmt.Fprintf(writer, "%q", "this is foo")
 	})
 
 }
